@@ -1,0 +1,35 @@
+﻿@page "/"
+@functions
+{
+    public string DayName { get; set; }
+    public void OnGet()
+    {
+        ViewData["Title"] = "ABC Retailers Website";
+        Model.DayName = DateTime.Now.ToString("dddd");
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Welcome ASP.NET Core!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Welcome to ABC Retailers!</h1>
+            <p class="lead">We supply products to our customers.</p>
+            <hr />
+            <p>@*It's @Model.DayName!*@  Our customers include specialty stores, department stores, and flea markets.</p>
+            <p>
+                <a class="btn btn-primary" href="suppliers">Learn more about our suppliers</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
